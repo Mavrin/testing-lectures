@@ -23,12 +23,12 @@ gulp.task('prepare', () => {
 			'!package.json'
 		])
 		.pipe(replace(
-			/(<link rel="stylesheet" href=")(node_modules\/shower-)([^\/]*)\/(.*\.css">)/g,
-			'$1shower/themes/$3/$4', { skipBinary: true }
+			/(<link rel="stylesheet" href=")(\.\.\/node_modules\/shower-)([^\/]*)\/(.*\.css">)/g,
+			'$1../shower/themes/$3/$4', { skipBinary: true }
 		))
 		.pipe(replace(
-			/(<script src=")(node_modules\/shower-core\/)(shower.min.js"><\/script>)/g,
-			'$1shower/$3', { skipBinary: true }
+			/(<script src=")(\.\.\/node_modules\/shower-core\/)(shower.min.js"><\/script>)/g,
+			'$1../shower/$3', { skipBinary: true }
 		));
 
 	const core = gulp.src([
