@@ -1,1 +1,1 @@
-https://github.com/Mavrin/testing-lectures
+https://mavrin.github.io/testing-lectures
