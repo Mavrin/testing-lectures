@@ -6,7 +6,8 @@
   "scripts": {
     "archive": "gulp archive",
     "gh-pages": "gulp publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:cool-asserts": "node ./examples/IsPowerOfTwo/IsPowerOfTwo.cool-asserts.test.js"
   },
   "dependencies": {
     "shower-core": "^2.1.0",
@@ -22,6 +23,7 @@
     "gulp-rsync": "0.0.7",
     "gulp-zip": "^4.0.0",
     "merge-stream": "^1.0.0",
+    "mocha": "^3.4.2",
     "path-exists-cli": "^1.0.0",
     "run-sequence": "^1.2.2"
   },
