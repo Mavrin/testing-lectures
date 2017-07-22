@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Title 1",
+      "publishedAt": "2017-02-23T08:41:03.000Z",
+      "channelTitle": "channelTitle 1",
+      "description": "Video description 1",
+      "viewCount": "20",
+      "thumbnailUrl": "thumbnailUrl1"
+    },
+    {
+      "id": "2",
+      "title": "Title 2",
+      "publishedAt": "2017-03-23T08:41:03.000Z",
+      "channelTitle": "channelTitle 2",
+      "description": "Video description 2",
+      "viewCount": "10",
+      "thumbnailUrl": "thumbnailUrl2"
+    }
+  ]
+}
