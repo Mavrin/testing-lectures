@@ -1,0 +1,45 @@
+{
+  "nextPageToken": "CA8QAA",
+  "pageInfo": {
+    "totalResults": 408770,
+    "resultsPerPage": 15
+  },
+  "items": [
+    {
+      "id": {
+        "videoId": "1"
+      },
+      "snippet": {
+        "publishedAt": "2017-02-23T08:41:03.000Z",
+        "title": "Title 1",
+        "description": "Video description 1",
+        "thumbnails": {
+          "medium": {
+            "url": "thumbnailUrl1",
+            "width": 320,
+            "height": 180
+          }
+        },
+        "channelTitle": "channelTitle 1"
+      }
+    },
+    {
+      "id": {
+        "videoId": "2"
+      },
+      "snippet": {
+        "publishedAt": "2017-03-23T08:41:03.000Z",
+        "title": "Title 2",
+        "description": "Video description 2",
+        "thumbnails": {
+          "medium": {
+            "url": "thumbnailUrl2",
+            "width": 320,
+            "height": 180
+          }
+        },
+        "channelTitle": "channelTitle 2"
+      }
+    }
+  ]
+}
