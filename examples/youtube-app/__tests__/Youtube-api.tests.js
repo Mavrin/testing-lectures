@@ -44,7 +44,7 @@ describe('youtube api', () => {
             expect(
                 youtubeApi.getDetailsUrl(['1', '2'])
             )
-                .toEqual('https://www.googleapis.com/youtube/v3//videos?key=mykey&id=1,2&part=statistics');
+                .toEqual('https://www.googleapis.com/youtube/v3/videos?key=mykey&id=1,2&part=statistics');
         });
         it('should merge search and details result', () => {
             expect(
@@ -57,11 +57,11 @@ describe('youtube api', () => {
             const searchRequest = fetch.mockResponseOnce(JSON.stringify(searchResponse));
             const detailsRequest =  fetch.mockResponseOnce(JSON.stringify(detailsResponse));
             return youtubeApi.getVideoByQuery('rolling-scopes-school').then((res) => {
-                expect(fetch).toHaveBeenCalledWith(
-                    "https://www.googleapis.com/youtube/v3//videos?key=mykey&id=1,2&part=statistics"
-                );
-                expect(fetch).toHaveBeenCalledWith(
+                expect(fetch.mock.calls[0][0]).toEqual(
                     "https://www.googleapis.com/youtube/v3/search?key=mykey&type=video&part=snippet&maxResults=10&q=rolling-scopes-school"
+                );
+                expect(fetch.mock.calls[1][0]).toEqual(
+                    "https://www.googleapis.com/youtube/v3/videos?key=mykey&id=1,2&part=statistics"
                 );
                 return expect(res).toEqual(expectedVideos);
             });
