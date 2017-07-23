@@ -11,7 +11,7 @@ export default class YoutubeApi {
         return response.items.map(({id:{videoId}}) => videoId);
     }
     getDetailsUrl(ids) {
-        return `${this.apiUrl}/videos?key=${this.key}&id=${ids.join(',')}&part=statistics`;
+        return `${this.apiUrl}videos?key=${this.key}&id=${ids.join(',')}&part=statistics`;
     }
     mergeResult(searchResult, detailsResult) {
         return searchResult.items.reduce((res,item) => {

@@ -23,7 +23,7 @@ describe('youtube api', () => {
             expect(
                 youtubeApi.getDetailsUrl(['1', '2'])
             )
-                .toEqual('https://www.googleapis.com/youtube/v3//videos?key=mykey&id=1,2&part=statistics');
+                .toEqual('https://www.googleapis.com/youtube/v3/videos?key=mykey&id=1,2&part=statistics');
         });
         it('should merge search and details result', () => {
             expect(

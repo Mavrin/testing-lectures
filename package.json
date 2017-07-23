@@ -8,9 +8,10 @@
     "gh-pages": "gulp publish",
     "test": "mocha ./examples/IsPowerOfTwo/IsPowerOfTwo.test.js",
     "test:mocha": "mocha ./examples/mocha/test",
+    "build": "webpack --config ./examples/youtube-app/webpack.config.js",
     "doc": "mocha ./examples/IsPowerOfTwo/IsPowerOfTwo.test.js --reporter=doc > doc.html",
     "test:cool-asserts": "node ./examples/IsPowerOfTwo/IsPowerOfTwo.cool-asserts.test.js",
-    "test:youtube": "jest examples/youtube-app"
+    "test:youtube": "jest examples/youtube-app/__tests__"
   },
   "dependencies": {
     "shower-core": "^2.1.0",
@@ -18,7 +19,9 @@
   },
   "devDependencies": {
     "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
+    "chromedriver": "^2.30.1",
     "del": "^2.2.1",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
@@ -33,7 +36,9 @@
     "mocha": "^3.4.2",
     "path-exists-cli": "^1.0.0",
     "run-sequence": "^1.2.2",
-    "sinon": "^2.3.8"
+    "selenium-webdriver": "^3.4.0",
+    "sinon": "^2.3.8",
+    "webpack": "^3.3.0"
   },
   "repository": {
     "type": "git",
