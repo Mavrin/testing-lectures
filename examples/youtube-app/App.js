@@ -6,7 +6,7 @@ class App {
     constructor(id) {
         this.container = document.getElementById(id);
         this.youtubeApi = new YoutubeApi('AIzaSyCTWC75i70moJLzyNh3tt4jzCljZcRkU8Y', 10);
-        this.container.innerHTML = this.render({query: '', items: ''});
+        this.container.innerHTML = this.render({query: '', items: []});
         document.addEventListener('submit', (e) => {
             e.preventDefault();
             const query = e.currentTarget.querySelector('input').value;

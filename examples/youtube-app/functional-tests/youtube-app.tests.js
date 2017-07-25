@@ -27,8 +27,12 @@ describe('youtube app', function () {
             .findElement(webdriver.By.css('input'))
             .sendKeys('js')
             .then(() => this.driver.findElement(webdriver.By.css('form')).submit())
-            .then(() => this.driver.wait(() => {
-                return webdriver.until.elementLocated((webdriver.By.css('li')));
-            }, 1000));
+            .then(() => {
+                return new Promise(function(resolve){
+                    setTimeout(resolve, 1000)
+                })
+            })
+            .then(() => this.driver
+            .findElement(webdriver.By.css('li')));
     });
 });
