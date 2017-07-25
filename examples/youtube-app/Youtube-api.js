@@ -1,6 +1,6 @@
 export default class YoutubeApi {
     constructor(key, count) {
-        this.key = null;
+        this.key = key;
         this.apiUrl = 'https://www.googleapis.com/youtube/v3/';
         this.count = count;
     }
