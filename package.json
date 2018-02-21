@@ -9,6 +9,7 @@
     "test": "mocha ./examples/IsPowerOfTwo/IsPowerOfTwo.test.js",
     "test:mocha": "mocha ./examples/mocha/test",
     "build": "webpack --config ./examples/youtube-app/webpack.config.js",
+    "start": "npm run build && node ./examples/youtube-app/index.js",
     "doc": "mocha ./examples/IsPowerOfTwo/IsPowerOfTwo.test.js --reporter=doc > doc.html",
     "test:cool-asserts": "node ./examples/IsPowerOfTwo/IsPowerOfTwo.cool-asserts.test.js",
     "test:youtube": "jest examples/youtube-app/__tests__",

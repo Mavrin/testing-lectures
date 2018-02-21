@@ -3,6 +3,7 @@ const server = require('./../server');
 require('chromedriver');
 
 describe('youtube app', function () {
+    this.timeout(6000);
     before('run app', function (done) {
         this.server = server(done);
     });
@@ -29,7 +30,7 @@ describe('youtube app', function () {
             .then(() => this.driver.findElement(webdriver.By.css('form')).submit())
             .then(() => {
                 return new Promise(function(resolve){
-                    setTimeout(resolve, 1000)
+                    setTimeout(resolve, 5000)
                 })
             })
             .then(() => this.driver
